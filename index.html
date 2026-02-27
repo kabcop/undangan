@@ -1,129 +1,128 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Undangan Buka Puasa</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    color: white;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    padding: 30px;
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.icon {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-h1 {
-    color: gold;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-weight: normal;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 16px;
-    margin: 8px 0;
-}
-
-.info {
-    margin: 15px 0;
-    padding: 15px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 15px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: gold;
-    color: black;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: orange;
-    transform: scale(1.05);
-}
-
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-/* Tampilan Desktop */
-@media (min-width: 768px) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Buka Bersama</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f7c873, #f5deb3);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
     h1 {
-        font-size: 32px;
+      color: #b3541e
     }
-    h2 {
-        font-size: 20px;
+    .details {
+      margin: 20px 0;
+      font-size: 18px;
+      line-height: 1.6;
     }
-    p {
-        font-size: 18px;
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
     }
-}
-</style>
+    form {
+      margin-top: 30px;
+      text-align: left;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #b3541e;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #8c3f15;
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <h1>AYO GEK NDANG MAGHRIB </h1>
+    <!-- Tombol Play Musik -->
+<button onclick="document.getElementById('musik').play()"> Play Musik</button>
 
-<div class="card">
-    <div class="icon">🌙✨</div>
-    <h1>Undangan Buka Puasa Bersama</h1>
-    <h2>Marhaban Ya Ramadhan 1447 H</h2>
+<!-- Audio File -->
+<audio id="musik" loop>
+  <source src="musik.mp3" type="audio/mpeg">
+  Browser Anda tidak mendukung audio.
+</audio>
 
-    <p>Assalamu’alaikum Wr. Wb.He rek!!</p>
-    <p>Dengan penuh kebahagiaan kami mengundang Anda untuk menghadiri acara:</p>
+    <p class="details">
+      Assalamu'alaikum warahmatullahi wabarakatuh,<br><br>
+      Dengan penuh rasa dan perhatian ku, untuk menyampaikan informasi terkait BUKBER <b>(Buka Bersama)</b>.<br><br>
+      #| Tanggal: 15 Maret 2026 |#<br>
+      #| Waktu: 17.30 Sore - selesai |#<br>
+      #| Tempat: Surabaya |#<br><br>
+      Mari kita jadikan momen ini sebagai ajang silaturahmi dan kebersamaan YGY, Dan ojok Lali Mangan yo guys ya. Sekian Terima Ngaji.
+    </p>
 
-    <div class="info">
-        <p><strong>📅 Tanggal:</strong> 22 Februari 2026</p>
-        <p><strong>⏰ Waktu:</strong> 17.00 WIB - Sak pegel mu</p>
-        <p><strong>📍 Tempat:</strong> Warkop Ae penak </p>
-    </div>
+    <h2>Konfirmasi Kehadiran Kalian!!</h2>
+<form action="https://formspree.io/f/xeelnbwn" method="POST" id="formUndangan">
+  <label>Nama:</label>
+  <input type="text" name="nama" required>
+  
+  <label>Email:</label>
+  <input type="email" name="email" required>
+  
+  <label>Apakah Anda akan hadir?</label><br>
+  <input type="radio" name="kehadiran" value="Hadir" required> Hadir<br>
+  <input type="radio" name="kehadiran" value="Tidak Hadir" required> Tidak Hadir<br><br>
 
-    <p>Merupakan suatu kehormatan bagi kami apabila Anda berkenan hadir.</p>
+  <!-- Alasan jika tidak hadir -->
+  <div id="alasanBox" style="display:none;">
+    <label>Alasan tidak hadir:</label>
+    <textarea name="alasan" rows="3"></textarea>
+  </div>
 
-    <!-- Ganti nomor di bawah dengan nomor WhatsApp -->
-    <a href="https://wa.me/6285954480019" class="btn">
-        Konfirmasi Kehadiran
-    </a>
-</div>
+  <!-- List makanan hanya untuk yang hadir -->
+  <div id="pangananBox" style="display:none;">
+    <label>List Makanan atau Curhatan Mu:</label>
+    <textarea name="panganan" rows="4"></textarea>
+  </div>
+  
+  <button type="submit">Checkout</button>
+</form>
 
-</body>
-</html>
+<script>
+  const radios = document.querySelectorAll('input[name="kehadiran"]');
+  const alasanBox = document.getElementById('alasanBox');
+  const pangananBox = document.getElementById('pangananBox');
+
+  radios.forEach(radio => {
+    radio.addEventListener('change', function() {
+      if (this.value === "Tidak Hadir") {
+        alasanBox.style.display = "block";
+        alasanBox.querySelector('textarea').setAttribute("required", "true");
+        pangananBox.style.display = "none";
+        pangananBox.querySelector('textarea').removeAttribute("required");
+      } else {
+        alasanBox.style.display = "none";
+        alasanBox.querySelector('textarea').removeAttribute("required");
+        pangananBox.style.display = "block";
+        pangananBox.querySelector('textarea').setAttribute("required", "true");
+      }
+    });
+  });
+</script>
